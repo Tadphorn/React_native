@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image, Pressable } from 'react-native'
+import { View, Text, ScrollView, Image, Pressable, FlatList } from 'react-native'
 import React, {useEffect, useState} from 'react'
 import axios from 'axios';
 

@@ -1,18 +1,23 @@
-import { View, Text, Image, Pressable } from 'react-native'
+import { View, Text, Image, Pressable, Button } from 'react-native'
 import React from 'react'
 
 const Splash = ({ navigation }) => {
-    const onPress =()=>{
+    const onPress = () => {
         navigation.navigate('Home')
+    }
+    const goSearch = () => {
+        console.log("hiiiii")
+        navigation.navigate('Search')
     }
 
     return (
-        <View style={{ height: "100%", alignItems: "center", backgroundColor: "pink" }}>  
+        <View style={{ height: "100%", alignItems: "center", backgroundColor: "pink" }}>
             <Pressable onPress={onPress}>
-            <Image source={{uri: 'https://pbs.twimg.com/media/Er87LKSUwAAGLc5.jpg'}}
-            style={{width: 400, height: 300}} />
+                <Image source={{ uri: 'https://pbs.twimg.com/media/Er87LKSUwAAGLc5.jpg' }}
+                    style={{ width: 400, height: 300 }} />
             </Pressable>
-            {/* <Image source={require('../img/2022-05-26 (1).png')} style={{ width: 150, height: 150 }} /> */}
+            <Button title="Press me" onPress={goSearch}>
+            </Button>
         </View>
     )
 }
