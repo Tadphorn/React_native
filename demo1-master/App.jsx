@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Splash from './screens/Splash';
 import Home from './screens/Home';
 import Detail from './screens/Detail';
+import Search from './screens/Search';
 import {
   StyleSheet,
   Text,
@@ -13,7 +14,7 @@ import {
 
 const Stack = createNativeStackNavigator();
 
-function App(): JSX.Element {
+function App() {
 
   return (
     //  <View>
@@ -35,6 +36,11 @@ function App(): JSX.Element {
           name="Detail"
           component={Detail}
           options={{ title: 'Detail' }}
+        />
+        <Stack.Screen
+          name="Search"
+          component={Search}
+          options={{ title: 'Search' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
